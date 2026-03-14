@@ -21,7 +21,7 @@ services:
       DATABASE_URL: postgresql://postgres:${DB_PASSWORD:-postgres}@db:5432/shop
       DEBUG: "False"
       ALLOWED_HOSTS: ${ALLOWED_HOSTS:-*}
-    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 8 --threads 4 config.asgi:application --host 0.0.0.0 --port 8000 --workers 4
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 8 --threads 4
 
 volumes:
   pg_data:
