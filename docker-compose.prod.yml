@@ -20,7 +20,7 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres:${DB_PASSWORD:-postgres}@db:5432/shop
       DEBUG: "False"
-      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-*}
+      ALLOWED_HOSTS: django.h1n.ru,81.90.182.174
     command: >
       sh -c "python manage.py migrate &&
             python load_data.py &&
